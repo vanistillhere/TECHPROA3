@@ -37,6 +37,7 @@ public class SeatworkTwelve {
         // check if the account DOES exist
         if (accountNumber < 0 || accountNumber >= balances.length) {
             System.out.println("Account number " + accountNumber + " does not exist! Exiting...");
+            scanner.close();
             return;
         }
         while (true) {
@@ -65,8 +66,10 @@ public class SeatworkTwelve {
             }
             if (optionChoice == 4) {
                 System.out.println("Exiting program...");
+                scanner.close();
                 break;
             }
         }
+        scanner.close();
     }
 }
